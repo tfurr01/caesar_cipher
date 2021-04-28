@@ -18,7 +18,7 @@ def caesar_cipher (plaintext, key)
 end
 
 def is_letter (char)
-	(char.ord >= 65 && char.ord <= 90) || (char.ord >= 97 && char.ord <=122)
+	char.ord.between?(65, 90) || char.ord.between?(97, 122)
 end
 
 puts caesar_cipher(plaintext, key).join
